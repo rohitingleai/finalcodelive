@@ -387,6 +387,34 @@
                 padding-left: 20%; /* This leaves 20% blank space on the left */
             }
 
+               /* Style headings (h1, h2, h3, etc.) */
+        .main-content h1 {
+            font-size: 32px; /* Large heading font size */
+            color: #000; /* Heading color */
+            margin-bottom: 20px; /* Spacing below headings */
+        }
+        .main-content h2 {
+            font-size: 25px; /* Medium heading font size */
+            margin-bottom: 15px;
+        }
+
+        .main-content h3 {
+            font-size: 22px; /* Small heading font size */
+            margin-bottom: 10px;
+        }
+        
+        .main-content h4 {
+            font-size: 20px; /* Small heading font size */
+            margin-bottom: 10px;
+        }
+
+        /* Style paragraphs */
+        .main-content p {
+            font-size: 18px;
+            margin-bottom: 20px; /* Spacing between paragraphs */
+        }
+
+               
             .sidebar-right {
                 width: 25%; /* Adjust the width of the right sidebar */
             }
