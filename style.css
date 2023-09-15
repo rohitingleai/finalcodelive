@@ -186,22 +186,22 @@
         
         /* Style headings (h1, h2, h3, etc.) */
         .main-content h1 {
-            font-size: 24px; /* Large heading font size */
+            font-size: 29px; /* Large heading font size */
             color: #000; /* Heading color */
             margin-bottom: 20px; /* Spacing below headings */
         }
         .main-content h2 {
-            font-size: 21px; /* Medium heading font size */
+            font-size: 26px; /* Medium heading font size */
             margin-bottom: 15px;
         }
 
         .main-content h3 {
-            font-size: 19px; /* Small heading font size */
+            font-size: 23px; /* Small heading font size */
             margin-bottom: 10px;
         }
         
         .main-content h4 {
-            font-size: 17px; /* Small heading font size */
+            font-size: 20px; /* Small heading font size */
             margin-bottom: 10px;
         }
 
