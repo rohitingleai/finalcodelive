@@ -277,12 +277,132 @@
             align-items: center;
             padding: 10px 20px;
         }
+        
+        
+        #slider {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #000000; /* Darker background color for slides */
+        }
+
+        .slide img {
+            width: 70%; /* Adjust image width */
+            height: 100%; /* Maintain aspect ratio */
+            object-fit: cover; /* Ensure image covers entire slide */
+        }
+
+        .slide-content {
+            padding: 20px;
+            height: 200px;
+            flex: 1; /* Fill available space */
+            display: flex; /* Add flex display */
+            flex-direction: column; /* Arrange content vertically */
+            justify-content: center; /* Center-align content horizontally */
+            align-items: center;
+        }
+
+        .slide-heading {
+            padding: 2px;
+            font-size: 30px;
+            color: #ffffff;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .slide-description {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #ccc; /* Lighter text color for description */
+        }
+
+        .slide-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff0000; /* Red button color */
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .slide-button:hover {
+            background-color: #cc0000; /* Darker red color on hover */
+        }
+        
+        
 
         /* Media query for mobile devices */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column; /* Stack columns in a single column */
             }
+            
+            .slide {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #000000;
+            }
+
+            .slide img {
+                width: 100%; /* Full width on mobile */
+                height: auto; /* Maintain aspect ratio */
+            }
+            
+            .slide-content {
+    padding: 10px;
+    height: 200px;
+    flex: 1;
+    display: flex; /* Add flex display */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: center; /* Center-align content horizontally */
+    align-items: center; /* Center-align content vertically */
+}
+
+/* Rest of your CSS remains the same */
+.slide-heading {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 0;
+}
+
+.slide-description {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+.slide-button {
+    margin-top: 15px;
+    padding: 7px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+        }
 
             footer {
                 display: none; /* Hide the footer in mobile mode */
@@ -340,17 +460,74 @@
         
         <div id="menu-btn">&#9776;</div> <!-- Menu button for mobile -->
     </header>
+    
+    <div id="slider">
+        <div class="slide">
+            <img src="https://img.freepik.com/free-photo/flowing-purple-mountain-spiral-bright-imagination-generated-by-ai_188544-9853.jpg?q=10&h=200" alt="Image 1">
+            <div class="slide-content">
+                <div class="slide-heading">Slide 1</div>
+                <div class="slide-description">Description for Slide 1</div>
+                <a href="#" class="slide-button">Start Learning</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=" alt="Image 2">
+            <div class="slide-content">
+                <div class="slide-heading">Slide 2</div>
+                <div class="slide-description">Description for Slide 2</div>
+                <a href="#" class="slide-button">Start Learning</a>
+            </div>
+        </div>
+
+        <div class="slide">
+            <img src="https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg" alt="Image 3">
+            <div class="slide-content">
+                <div class="slide-heading">Slide 3</div>
+                <div class="slide-description">Description for Slide 3</div>
+                <a href="#" class="slide-button">Start Learning</a>
+            </div>
+           
+        </div>
+        
+        
+        
+        <div class="slide">
+            <img src="https://img.freepik.com/free-photo/flowing-purple-mountain-spiral-bright-imagination-generated-by-ai_188544-9853.jpg?q=10&h=200" alt="Image 1">
+            <div class="slide-content">
+                <div class="slide-heading">Slide 5</div>
+                <div class="slide-description">Description for Slide 1</div>
+                <a href="#" class="slide-button">Start Learning</a>
+            </div>
+        </div>
+
+        
+        
+        <div class="slide">
+            <img src="https://img.freepik.com/free-photo/flowing-purple-mountain-spiral-bright-imagination-generated-by-ai_188544-9853.jpg?q=10&h=200" alt="Image 1">
+            <div class="slide-content">
+                <div class="slide-heading">Slide 4</div>
+                <div class="slide-description">Description for Slide 1</div>
+                <a href="#" class="slide-button">Start Learning</a>
+            </div>
+        </div>
+
+        
+        
+        
+        
+        
+        
+        
+    </div>
+
+    
+    
 
     <div class="container">
         <div class="main-content">
-            <!-- Main Content Goes Here -->
-            <h1>Welcome to Your Website</h1>
-            <h2>Welcome to Your Website</h2>
-            <h3>Welcome to Your Website</h3>
-            <h4>Welcome to Your Website</h4>
-            <p style="text-align: justify;">A website is a collection of web pages that are linked together and hosted on the internet. These web pages can contain various types of content, such as text, images, videos, and interactive elements. Websites are accessed by users through web browsers like Chrome, Firefox, or Safari, and they are identified by a unique web address known as a URL (Uniform Resource Locator).</p>
         </div>
-    </div>
+            
 
     <footer>
         <div>&copy; 2023 Your Website. All Rights Reserved.</div>
@@ -370,6 +547,43 @@
             search.value = "site:www.ristudypost.com " + search.value;
             form.submit();
         });
+        
+        
+        const slider = document.getElementById('slider');
+        const slides = slider.getElementsByClassName('slide');
+        let currentSlideIndex = 0;
+
+        // Function to shuffle an array randomly
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Shuffle the order of slides
+        const slideOrder = Array.from(slides);
+        shuffleArray(slideOrder);
+
+        function showSlide(index) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = 'none';
+            }
+            slideOrder[index].style.display = 'flex';
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        }
+
+        function startSlider() {
+            showSlide(currentSlideIndex);
+            setInterval(nextSlide, 10000); // 10-second interval
+        }
+
+        startSlider();
+        
     </script>
 </body>
 </html>
