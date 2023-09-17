@@ -228,6 +228,7 @@
 /* Style the vertical menu cards (Existing Styles) */
 .menu-card {
   width: 100%;
+  font-size: 22px;
   display: flex;
   align-items: center;
   margin-bottom: 6px;
