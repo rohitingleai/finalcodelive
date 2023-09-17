@@ -331,6 +331,7 @@
         @media (max-width: 768px) {
             .container {
                 flex-direction: column; /* Stack columns in a single column */
+                font-family: Overpass;
             }
 
             .sidebar-left,
@@ -372,6 +373,7 @@
         @media (min-width: 769px) {
             .container {
                 flex-direction: row; /* Restore columns in a row for desktop */
+                font-family: Overpass;
             }
 
             .sidebar-left {
