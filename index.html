@@ -3,28 +3,329 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    
+    <!-- Add SEO-friendly meta tags -->
+    <meta name="description" content="Your website description goes here">
+    <meta name="keywords" content="your, keywords, go, here">
+    <meta name="author" content="Your Name">
+    
+    <!-- Add CSS for Google SEO and Vertical Menu -->
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <title>PyDoc</title>
-    <meta name="description" content="This is a sample web page with HTML code.">
-    <meta name="keywords" content="SEO, Search Engine Optimization, HTML, css, Web Development">
-    
-	
-    <link rel="icon" href="https://rb.gy/9by23" type="image/png">
-    <link rel="shortcut icon" href="https://rb.gy/9by23" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        /* Style the header */
+        header {
+            background-color: #000000; /* Updated background color */
+            color: #fff; /* Updated text color */
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 20px;
+        }
 
-	
-    
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Style for the horizontal menu (displayed in desktop mode) */
+        ul.horizontal-menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000000;
+        }
+
+        /* Style for each menu item */
+        li.horizontal-menu-item {
+            float: left;
+        }
+
+        /* Style for the menu item links */
+        li.horizontal-menu-item a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Style for the menu item links on hover */
+        li.horizontal-menu-item a:hover {
+            background-color: #555;
+        }
+
+        /* Media query to hide the menu in mobile mode */
+        @media (max-width: 768px) {
+            ul.horizontal-menu {
+                display: none;
+            }
+        }
+        
+        /* Style the search bar container */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style the search input container */
+        .search-input {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%; /* Make the input container responsive */
+            max-width: 400px; /* Limit the maximum width for larger screens */
+            background-color: #0d0d0d; /* Dark background color */
+            overflow: hidden;
+            margin-left: 20px; /* Add margin to separate from logo */
+        }
+
+        /* Style the search input */
+        input[type="search"] {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            font-size: 14px;
+            background-color: transparent; /* Remove white background */
+            color: #fff; /* White text color */
+            width: 100%; /* Make the input responsive */
+            outline: none; /* Remove outline on focus */
+        }
+
+        /* Style the navigation menu for mobile */
+        #menu-btn {
+            display: none; /* Hide the menu button by default */
+            cursor: pointer;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column; /* Display the menu items in a column */
+            background-color: #fff;
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+            display: none; /* Hide the navigation menu by default */
+        }
+
+        nav ul.active {
+            display: flex; /* Show the navigation menu when active */
+        }
+
+        nav ul li {
+            margin: 0;
+            padding: 10px 20px; /* Add padding to menu items */
+        }
+
+        /* Style the main content area and columns */
+        .container {
+            margin-top: 70px; /* Make space for the fixed header */
+            margin-bottom: 70px; /* Make space for the fixed footer */
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Style the main content */
+        .main-content {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px;
+            margin: 0 auto;
+            font-family: "Roboto";
+            font-size: 17.5px;
+            line-height: 1.4;
+            text-align: justify;
+        }
+        
+        /* Style headings (h1, h2, h3, etc.) */
+        .main-content h1 {
+            font-size: 24px; /* Large heading font size */
+            color: #000; /* Heading color */
+            margin-bottom: 20px; /* Spacing below headings */
+        }
+        .main-content h2 {
+            font-size: 21px; /* Medium heading font size */
+            margin-bottom: 15px;
+        }
+
+        .main-content h3 {
+            font-size: 19px; /* Small heading font size */
+            margin-bottom: 10px;
+        }
+        
+        .main-content h4 {
+            font-size: 17px; /* Small heading font size */
+            margin-bottom: 10px;
+        }
+
+        /* Style paragraphs */
+        .main-content p {
+            margin-bottom: 20px; /* Spacing between paragraphs */
+        }
+
+        /* Style the vertical menu cards (Existing Styles) */
+        .menu-card {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .menu-card:hover {
+            transform: scale(1.02);
+        }
+
+        /* Logo image (Existing Styles) */
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        /* Text (Existing Styles) */
+        .menu-text {
+            flex-grow: 1;
+        }
+
+        .menu-text h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .menu-text p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Ad Container Styles */
+        .ad-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .ad-container:hover {
+            transform: scale(1.02);
+        }
+
+        .ad-image {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .ad-text {
+            flex-grow: 1;
+        }
+
+        .ad-text h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .ad-text p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #000000; /* Updated background color */
+            color: #fff; /* Updated text color */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0px -3px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        /* Media query for mobile devices */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack columns in a single column */
+            }
+
+            footer {
+                display: none; /* Hide the footer in mobile mode */
+            }
+        }
+
+        /* Media query for desktop devices */
+        @media (min-width: 769px) {
+            .container {
+                flex-direction: row; /* Restore columns in a row for desktop */
+            }
+
+            /* Horizontal Footer Menu */
+            footer ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            footer ul li {
+                margin: 0;
+                padding: 0 20px;
+            }
+
+            footer ul li a {
+                text-decoration: none;
+                color: #fff;
+            }
+
+            /* Footer Menu Hover Effect */
+            footer ul li a:hover {
+                text-decoration: underline;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" alt="Your Logo" width="100">
-
         
         <ul class="horizontal-menu">
-           <li class="horizontal-menu-item"><a class="active" href="/"><i class="fa fa-home"></i></a></li>
+           <li class="horizontal-menu-item"><a href="#home">Home</a></li>
            <li class="horizontal-menu-item"><a href="#about">About</a></li>
            <li class="horizontal-menu-item"><a href="#services">Services</a></li>
            <li class="horizontal-menu-item"><a href="#contact">Contact</a></li>
@@ -34,97 +335,22 @@
         <div class="search-container">
             <form action="https://www.google.com/search" target="_blank" method="GET" class="search-input">
                 <input type="search" name="q" placeholder="Search..." />
-                
             </form>
         </div>
         
         <div id="menu-btn">&#9776;</div> <!-- Menu button for mobile -->
     </header>
 
-    <nav class="sidebar-left">
-        <a href="#" class="active">Menu Item 1</a>
-        <a href="#">Menu Item 2</a>
-        <a href="#">Menu Item 3</a>
-        <a href="#">Menu Item 4</a>
-        <a href="#">Menu Item 2</a>
-        <a href="#">Menu Item 3</a>
-        <a href="#">Menu Item 4</a>
-        <a href="#">Menu Item 2</a>
-        <a href="#">Menu Item 3</a>
-        <a href="#">Menu Item 4</a>
-        <!-- Add more menu items as needed -->
-    </nav>
-
     <div class="container">
-	    <div class="main-content">
+        <div class="main-content">
             <!-- Main Content Goes Here -->
-
-	
-            
-
-
-            
             <h1>Welcome to Your Website</h1>
             <h2>Welcome to Your Website</h2>
             <h3>Welcome to Your Website</h3>
             <h4>Welcome to Your Website</h4>
             <p style="text-align: justify;">A website is a collection of web pages that are linked together and hosted on the internet. These web pages can contain various types of content, such as text, images, videos, and interactive elements. Websites are accessed by users through web browsers like Chrome, Firefox, or Safari, and they are identified by a unique web address known as a URL (Uniform Resource Locator).</p>
         </div>
-        
-
-        
-        
-        
-        
-        
-        
-        
-        
-        <div class="sidebar-right">
-        
-    
-
-<div class="menu-card">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR73w4MRnWfk-iRQ9xtdWfr89T9tFY5kMbtug&usqp=CAU" width="50" height="50" alt="Logo 2" class="logo">
-  <div class="menu-text">
-    <h3><a href="#">Python Programming</a></h3>
-  </div>
-</div>
-
-<div class="menu-card">
-  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
-  <div class="menu-text">
-    <h3>JAVA Programming</h3>
-  </div>
-</div>
-
- 
-
-<div class="menu-card">
-  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
-  <div class="menu-text">
-    <h3>Machine Learning</h3>
-  </div>
-</div>
-            
-  <!-- Ad Container -->
-    <div class="ad-container">
-         <!-- Ad Display Container --> 
-        
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        </div>
     </div>
-
-
-
 
     <footer>
         <div>&copy; 2023 Your Website. All Rights Reserved.</div>
@@ -135,12 +361,15 @@
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        
     </footer>
-
-
-    <script src="script.js"></script>
-    
+    <script>
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var search = form.querySelector("input[type=search]");
+            search.value = "site:www.ristudypost.com " + search.value;
+            form.submit();
+        });
+    </script>
 </body>
-
 </html>
