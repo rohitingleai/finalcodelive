@@ -550,7 +550,7 @@
             background-color: #cc0000; /* Darker red color on hover */
         }
 
-        @media (max-width: 768px) { /* Change layout for screens smaller than 768px (mobile) */
+        @media (max-width: 1000px) { /* Change layout for screens smaller than 768px (mobile) */
             #slider {
             width: 100%;
             height: 500px;
@@ -610,6 +610,115 @@
                 display: inline-block;
             }
         }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        a {
+  text-decoration: none;
+  color: #fff;
+}
+
+        .column {
+            width: 100%;
+            max-width: 31.8%;
+            background-color: #000;
+            border: 1px solid #444;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .menu-card {
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            background: linear-gradient(to right, #000, #333); /* Random gradient design */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .menu-card:hover {
+            transform: scale(1.02);
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .menu-text {
+            flex-grow: 1;
+        }
+
+        .menu-text h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #fff; /* Text color changed to white for better contrast */
+        }
+
+        .menu-text p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        .ad-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            background-color: #000;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .ad-container:hover {
+            transform: scale(1.02);
+        }
+
+        .ad-image {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .ad-text {
+            flex-grow: 1;
+        }
+
+        .ad-text h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .ad-text p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 1150px) {
+            .column {
+                max-width: 100%;
+                margin: 10px 0;
+            }
+        }
+        
         
     </style>
 </head>
@@ -763,16 +872,200 @@
 </div>
 <!-- partial -->
 
-    <div class="container">
-        <div class="main-content">
-            <!-- Main Content Goes Here -->
-            <h1>Welcome to Your Website</h1>
-            <h2>Welcome to Your Website</h2>
-            <h3>Welcome to Your Website</h3>
-            <h4>Welcome to Your Website</h4>
-            <p style="text-align: justify;">A website is a collection of web pages that are linked together and hosted on the internet. These web pages can contain various types of content, such as text, images, videos, and interactive elements. Websites are accessed by users through web browsers like Chrome, Firefox, or Safari, and they are identified by a unique web address known as a URL (Uniform Resource Locator).</p>
+
+
+
+<div class="column">
+        <h2>Title</h2>
+        <div class="menu-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR73w4MRnWfk-iRQ9xtdWfr89T9tFY5kMbtug&usqp=CAU" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3><a href="#">Python Programming</a></h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>JAVA Programming</h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>Machine Learning</h3>
+            </div>
+        </div>
+        <div class="ad-container">
+            <!-- Add your ad content here -->
         </div>
     </div>
+    
+    
+    <div class="column">
+        <h2>Title</h2>
+        <div class="menu-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR73w4MRnWfk-iRQ9xtdWfr89T9tFY5kMbtug&usqp=CAU" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3><a href="#">Python Programming</a></h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>JAVA Programming</h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>Machine Learning</h3>
+            </div>
+        </div>
+        <div class="ad-container">
+            <!-- Add your ad content here -->
+        </div>
+    </div>
+    
+    
+    <div class="column">
+        <h2>Title</h2>
+        <div class="menu-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR73w4MRnWfk-iRQ9xtdWfr89T9tFY5kMbtug&usqp=CAU" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3><a href="#">Python Programming</a></h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>JAVA Programming</h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>Machine Learning</h3>
+            </div>
+        </div>
+        <div class="ad-container">
+            <!-- Add your ad content here -->
+        </div>
+    </div>
+    
+    
+ <div>
+            <!-- Add your ad content here -->
+</div>
+    
+    
+    
+    <div class="column">
+        <h2>Title</h2>
+        <div class="menu-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR73w4MRnWfk-iRQ9xtdWfr89T9tFY5kMbtug&usqp=CAU" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3><a href="#">Python Programming</a></h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>JAVA Programming</h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>Machine Learning</h3>
+            </div>
+        </div>
+        <div class="ad-container">
+            <!-- Add your ad content here -->
+        </div>
+    </div>
+    
+    
+    <div class="column">
+        <h2>Title</h2>
+        <div class="menu-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR73w4MRnWfk-iRQ9xtdWfr89T9tFY5kMbtug&usqp=CAU" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3><a href="#">Python Programming</a></h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>JAVA Programming</h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>Machine Learning</h3>
+            </div>
+        </div>
+        <div class="ad-container">
+            <!-- Add your ad content here -->
+        </div>
+    </div>
+    
+    
+    <div class="column">
+        <h2>Title</h2>
+        <div class="menu-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR73w4MRnWfk-iRQ9xtdWfr89T9tFY5kMbtug&usqp=CAU" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3><a href="#">Python Programming</a></h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>JAVA Programming</h3>
+            </div>
+        </div>
+
+        <div class="menu-card">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgb0NaY4m7r4aRUkLJy6sfCBwm-yuBgZpTM8K5bIn0c0z9674gW5TAnE45rllHOv29y53eg0Wo0uC7_BYMw1T3EBd-haAP3LJ5k3DIuuQRcjSqLRZaICshdzr7LGZ5O2yh4oSxWk5e5KE48uEODX1yq8Upiu_Ddq_PlBgCgePr0kD68Rispt8HLAZBTiKTE" width="50" height="50" alt="Logo 2" class="logo">
+            <div class="menu-text">
+                <h3>Machine Learning</h3>
+            </div>
+        </div>
+        <div class="ad-container">
+            <!-- Add your ad content here -->
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+
+<div>
+<p>&nbsp;<span style="color: #000000;">Hello hiii&nbsp;</span></p>
+
+<p>&nbsp;<span style="color: #000000;">Hello hiii&nbsp;</span></p>
+
+<p>&nbsp;<span style="color: #000000;">Hello hiii&nbsp;</span></p>
+
+<p>&nbsp;<span style="color: #000000;">Hello hiii&nbsp;</span></p>
+</div>
+
+
+    
 
     <footer>
         <div>&copy; 2023 Your Website. All Rights Reserved.</div>
